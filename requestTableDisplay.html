@@ -1,0 +1,121 @@
+<!--
+  Modified version of requestTableDisplay.html for the Open University TT284 Web technologies TMA02
+  It displays the OURC Runners data in a table and can be sorted by Runner ID, Event ID, Date, Finish Time, Position, Category ID, Age Grade, Personal Best
+  Modified by Leire Larrea Casado (E1662175)
+  Version 1.1 (January 2017)
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1"/>
+    <link rel="StyleSheet" href="styles.css" type="text/css" media="screen" />
+    <title>Produce a Sorted Display of Times</title>
+    <meta name="keywords" content="The Open University Running Club, Results Display, Times Display" />
+	<meta name="description" content="OU Runners Results Display Page" />
+	<link href="styles_ourc.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    
+    <body>
+	<div id="page">
+		<div id="header">
+			<div class="title">
+				<a href="index_ourc.htm">
+					 Open University Running Club
+				</a>
+			</div>
+			<a href="index_ourc.htm">
+				<img src="images/header.jpg" alt="The Open University Logo in a blue background" />
+			</a>
+		</div>
+		
+		<div id="navbar">
+	  		<div class="hmenu"><a href="submitResultForm.html">Submit Results</a></div>
+	       	<div class="hmenuActive"><a href="requestTableDisplay.html">Display Results</a></div>
+        </div>
+		
+		<div id="page_content">
+
+			<div class="sponsors">
+				<div class="links">
+					Sponsored links:
+				</div>
+
+				<div class="links">
+			       		<a href="http://www.parkrun.org.uk/miltonkeynes/home">Parkrun</a><br />
+			        	<a href="http://www.mkhalf.co.uk">Half Marathon</a><br/>
+			        	<a href="http://www.mkac.org.uk/">Athletic Club</a><br />
+			        	<a href="http://www.mkweb.co.uk/sport/">MK Sports</a><br />
+			        	<a href="http://www.bigfunrun.com/">Big Fun Run</a><br />
+			        	<a href="http://www.thefixevents.com/content/events/">Events</a><br />
+	
+				</div>
+			</div>
+
+    			
+
+			<div class="content">
+                <hr/>
+                    <h1>Produce a Sorted Display of Times</h1>
+                    <form action="http://llc222.tt284.open.ac.uk/b2files/getValues.php" method="post" id="displayTimeTable">
+                        <table>
+                            <tr>
+                                <td>
+                                    Include AgeGrade
+                                    <input type="radio" name="IncludeAgeGrade" value="1" />Yes
+                                    <input type="radio" name="IncludeAgeGrade" value="0" />No
+                                </td>
+                            </tr>
+        
+                            <tr>
+                                <td>
+                                    Sort table on =
+                                    <select name="SortBy">
+                                        <option value="RunnerID" selected="selected">Runner ID</option>
+                                        <option value="EventID">Event ID</option>
+                                        <option value="Date">Date</option>
+                                        <option value="FinishTime">Finish Time</option>
+                                        <option value="Position">Position</option>
+                                        <option value="CategoryID">Category ID</option>
+                                        <option value="AgeGrade">Age Grade</option>
+                                        <option value="PB">Personal Best</option>
+                                    </select>
+                                </td>
+            
+                                <td>
+                                    Sort in =
+                                    <select name="SortIn">
+                                        <option value="asc" selected="selected">Ascending order</option>
+                                        <option value="desc">Descending order</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+    
+                        <p>
+                            <input type="submit" name="submit" value="Submit"/>
+                        </p>
+
+                    </form>
+                    
+                    
+                </hr>
+		    </div>
+    
+        </div>
+            <div id="footer">
+		        <a href="">Privacy</a> |
+    		    <a href="">Contact</a> |
+	    	    <a href="">FAQs</a> |
+		        <a href="">Copyright</a> |
+		        <a href="">Conditions of use</a>
+	        </div>
+        
+    </body>
+</html>
+

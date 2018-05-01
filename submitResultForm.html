@@ -1,0 +1,131 @@
+<!--
+ Modified version of submitResultForm.html for the Open University TT284 Web technologies TMA02
+ Form that takes the OURC Runners data (Runner ID, Event ID, Date, Finish Time, Position, Category ID, Age Grade, Personal Best) and uploads it to the Open University Server and Database
+  Modified by Leire Larrea Casado (E1662175)
+ Version 1.1 (January 2017)
+-->
+
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    
+
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1"/>
+	<title>Submit a runner time</title>
+	<meta name="keywords" content="The Open University Running Club, submit results, submit time" />
+	<meta name="description" content="The OU Runners Club Submit Times Page" />
+	<link href="styles_ourc.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="validation.js"> </script>
+
+
+
+
+</head>
+
+<body onload="document.submisionTable.RunnerID.focus();">
+	<div id="page">
+		<div id="header">
+			<div class="title">
+				<a href="index_ourc.htm">
+					 Open University Running Club
+				</a>
+			</div>
+			<a href="index_ourc.htm">
+				<img src="images/header.jpg" alt="The Open University Logo in a blue background" />
+			</a>
+		</div>
+		
+		<div id="navbar">
+	  		<div class="hmenuActive"><a href="submitResultForm.html">Submit Results</a></div>
+	        <div class="hmenu"><a href="requestTableDisplay.html">Display Results</a></div>
+		</div>
+		
+		<div id="page_content">
+
+			<div class="sponsors">
+				<div class="links">
+					Sponsored links:
+				</div>
+
+				<div class="links">
+			       		<a href="http://www.parkrun.org.uk/miltonkeynes/home">Parkrun</a><br />
+			        	<a href="http://www.mkhalf.co.uk">Half Marathon</a><br/>
+			        	<a href="http://www.mkac.org.uk/">Athletic Club</a><br />
+			        	<a href="http://www.mkweb.co.uk/sport/">MK Sports</a><br />
+			        	<a href="http://www.bigfunrun.com/">Big Fun Run</a><br />
+			        	<a href="http://www.thefixevents.com/content/events/">Events</a><br />
+	
+				</div>
+			</div>
+
+    			
+
+			<div class="content">
+				
+				<hr/>
+					<h1>Submit a runner time</h1>
+				<hr/>
+				<p> Note: all fields marked '*' are mandatory.</p>
+				<p> You can use tab keys to move from one input field to the next.</p>
+				<form  action="http://llc222.tt284.open.ac.uk/b2files/submitValues.php" method="post" name="submitrunnertime" onsubmit ="return fullValidation()" >
+				
+					<table>
+						<tr>
+							<td>Runner ID*</td>
+							<td><input type="text" name="RunnerID" id="rid" size="4" maxlength="4" onchange="return validaterid();"/></td>
+						</tr>
+						<tr>
+							<td>Event ID*</td>
+							<td> <input type="text" name="EventID" id="eid" size="4" maxlength="4" onchange="return validateeid();" /></td>
+						</tr>
+						<tr>
+							<td>Date (YYYY-MM-DD)*</td>
+							<td><input type="text" name="Date" id="d" size="10" maxlength="10" onchange="return validated();" /></td>
+						</tr>
+						<tr>
+							<td>Finish time (HH:MM:SS)*</td>
+							<td><input type="text" name="FinishTime" id="ft" size="8" maxlength="8" onchange="return validateft();" /></td>
+						</tr>
+						<tr>
+							<td>Position</td>
+							<td><input type="text" name="Position" id="p" size="5" maxlength="5" onchange="return validatep();" /></td>
+						</tr>
+						<tr>
+							<td>Category ID</td>
+							<td><input type="text" name="CategoryID" id="cid" size="3" maxlength="2" onchange="return validatecid();"/></td>
+						</tr>
+						<tr>
+							<td>Age grade</td>
+							<td><input type="text" name="AgeGrade" id="ag" size="5" maxlength="5" onchange="return validateag();" /></td>
+						</tr>
+						<tr>
+							<td>Personal best</td>
+							<td><input type="text" name="PB" id="pb" size="1" maxlength="1" onchange="return validatepb();" /></td>
+						</tr>
+					</table>
+					<input type="submit" name="submitrunnertime" value="submit"  />
+				<hr/>
+			</form>
+
+
+
+
+
+			</div>
+		</div>
+<div id="footer">
+		<a href="">Privacy</a> |
+		<a href="">Contact</a> |
+		<a href="">FAQs</a> |
+		<a href="">Copyright</a> |
+		<a href="">Conditions of use</a>
+	</div>
+</div>
+	
+   
+</body>
+
+</html>
